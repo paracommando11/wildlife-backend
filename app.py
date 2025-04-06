@@ -12,6 +12,10 @@ from twilio.rest import Client
 from PIL import Image
 from io import BytesIO
 from starlette.responses import JSONResponse
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = FastAPI()
 
@@ -28,8 +32,8 @@ app.add_middleware(
 genai_client = genai.Client(api_key="AIzaSyDvKZ7VGCCczNL8GwNdDAGu0utSyilW1yM")
 
 # ✅ Configure Twilio API
-TWILIO_SID = "ACd9bf0c1706a3f34e719b6797814e91d4"
-TWILIO_AUTH_TOKEN = "247855e5d53638f8284af9a8b39d8f6f"
+TWILIO_SID = os.getenv("ACCOUNT_SID")
+TWILIO_AUTH_TOKEN = os.getenv("AUTH_TOKEN")
 TWILIO_PHONE = "+14693064853"
 EMERGENCY_PHONE = "+918302144237"
 
