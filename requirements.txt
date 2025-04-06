@@ -4,3 +4,4 @@ opencv-python
 python-dotenv
 google-generativeai
 twilio
+google-genai
