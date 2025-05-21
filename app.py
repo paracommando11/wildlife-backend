@@ -29,18 +29,18 @@ app.add_middleware(
 )
 
 # ✅ Configure Google Gemini AI
-genai_client = genai.Client(api_key="AIzaSyDvKZ7VGCCczNL8GwNdDAGu0utSyilW1yM")
+genai_client = genai.Client(api_key="google api key")
 
 # ✅ Configure Twilio API
 TWILIO_SID = os.getenv("ACCOUNT_SID")
 TWILIO_AUTH_TOKEN = os.getenv("AUTH_TOKEN")
-TWILIO_PHONE = "+14693064853"
-EMERGENCY_PHONE = "+918302144237"
+TWILIO_PHONE = "enter here"
+EMERGENCY_PHONE = "your phone"
 
 client = Client(TWILIO_SID, TWILIO_AUTH_TOKEN)
 
 # 📌 Replace with your IP Webcam URL
-phone_camera_url = "http://192.168.218.191:8080/video"
+phone_camera_url = "enter webacm url"
 cap = cv2.VideoCapture(phone_camera_url)
 
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
